@@ -7,36 +7,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --cream: #faf8f4;
-      --ink: #1a1612;
-      --ink-soft: #3d3530;
-      --maroon: #7a1933;
-      --maroon-light: #a02244;
-      --gold: #c9a84c;
-      --rule: #e2ddd7;
-      --sidebar-bg: #1e1a16;
-      --sidebar-muted: #8a8178;
-      --mono: 'JetBrains Mono', monospace;
-      --serif: 'Cormorant Garamond', Georgia, serif;
-      --sans: 'Inter', sans-serif;
+      --cream: #faf8f4; --ink: #1a1612; --ink-soft: #3d3530; --maroon: #7a1933;
+      --maroon-light: #a02244; --gold: #c9a84c; --rule: #e2ddd7;
+      --sidebar-bg: #1e1a16; --sidebar-muted: #8a8178;
+      --mono: 'JetBrains Mono', monospace; --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'Inter', sans-serif;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.7; }
-
-    nav {
-      position: sticky; top: 0;
-      background: var(--sidebar-bg);
-      z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 48px; height: 56px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
+    nav { position: sticky; top: 0; background: var(--sidebar-bg); z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 56px; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .nav-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 500; color: #fff; text-decoration: none; }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sidebar-muted); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: #fff; }
-
     .hero { max-width: 900px; margin: 0 auto; padding: 72px 48px 64px; display: grid; grid-template-columns: 200px 1fr; gap: 48px; align-items: start; }
     .hero-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; border: 3px solid var(--rule); }
     .hero-right h1 { font-family: var(--serif); font-size: 2.6rem; font-weight: 400; line-height: 1.15; color: var(--ink); margin-bottom: 6px; }
@@ -46,26 +29,20 @@
     .hero-bio a { color: var(--maroon); text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color 0.2s; }
     .hero-bio a:hover { border-color: var(--maroon); }
     .hero-links { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
-    .btn { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--maroon); padding: 9px 18px; text-decoration: none; border-radius: 2px; transition: background 0.2s; }
+    .btn { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--maroon); padding: 9px 18px; text-decoration: none; border-radius: 2px; transition: background 0.2s; cursor: pointer; border: none; }
     .btn:hover { background: var(--maroon-light); }
     .btn-ghost { background: transparent; color: var(--maroon); border: 1px solid var(--maroon); }
     .btn-ghost:hover { background: var(--maroon); color: #fff; }
     .social-icons { display: flex; gap: 16px; }
-    .social-icons a { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sidebar-muted); text-decoration: none; transition: color 0.2s; }
+    .social-icons a { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sidebar-muted); text-decoration: none; transition: color 0.2s; cursor: pointer; }
     .social-icons a:hover { color: var(--maroon); }
-
     .content { max-width: 900px; margin: 0 auto; padding: 0 48px 80px; }
     .section { margin-bottom: 72px; opacity: 0; transform: translateY(12px); animation: fadeUp 0.5s ease forwards; }
-    .section:nth-child(1) { animation-delay: 0.15s; }
-    .section:nth-child(2) { animation-delay: 0.25s; }
-    .section:nth-child(3) { animation-delay: 0.35s; }
-    .section:nth-child(4) { animation-delay: 0.45s; }
+    .section:nth-child(1) { animation-delay: 0.15s; } .section:nth-child(2) { animation-delay: 0.25s; } .section:nth-child(3) { animation-delay: 0.35s; } .section:nth-child(4) { animation-delay: 0.45s; }
     @keyframes fadeUp { to { opacity: 1; transform: none; } }
-
     .section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
     .section-header h2 { font-family: var(--serif); font-size: 1.9rem; font-weight: 400; color: var(--ink); white-space: nowrap; }
     .section-header::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
-
     .posts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
     .post-card { border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s; display: flex; flex-direction: column; }
     .post-card:hover { border-color: var(--maroon); transform: translateY(-2px); }
@@ -75,7 +52,6 @@
     .post-card-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; color: var(--ink); line-height: 1.3; margin-bottom: 8px; }
     .post-card:hover .post-card-title { color: var(--maroon); }
     .post-card-desc { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.6; flex: 1; }
-
     .research-item { display: grid; grid-template-columns: 1fr 160px; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--rule); align-items: start; }
     .research-item:first-child { border-top: 1px solid var(--rule); }
     .research-title { font-family: var(--serif); font-size: 1.15rem; font-weight: 500; color: var(--ink); margin-bottom: 6px; line-height: 1.3; }
@@ -86,27 +62,17 @@
     .research-links a:hover { border-color: var(--maroon); background: rgba(122,25,51,0.05); }
     .research-img-placeholder { width: 160px; height: 100px; background: linear-gradient(135deg, #1e1a16 0%, #3d2a1e 100%); border-radius: 2px; display: flex; align-items: center; justify-content: center; }
     .research-img-placeholder span { font-family: var(--mono); font-size: 0.55rem; color: var(--sidebar-muted); letter-spacing: 0.1em; text-transform: uppercase; text-align: center; padding: 8px; }
-
-    .course-card { border: 1px solid var(--rule); border-radius: 3px; padding: 20px 24px; margin-bottom: 16px; transition: border-color 0.2s; }
-    .course-card:hover { border-color: var(--maroon); }
-    .course-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
-    .course-meta { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
-    .course-desc { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.6; }
-
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 48px; }
     .contact-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sidebar-muted); margin-bottom: 4px; }
     .contact-value { font-size: 0.95rem; color: var(--ink); line-height: 1.5; }
     .contact-value a { color: var(--maroon); text-decoration: none; }
     .contact-value a:hover { text-decoration: underline; }
-
     footer { background: var(--sidebar-bg); padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; }
     footer p { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; color: var(--sidebar-muted); }
     footer a { color: var(--sidebar-muted); text-decoration: none; }
     footer a:hover { color: #fff; }
-
     @media (max-width: 720px) {
-      nav { padding: 0 20px; }
-      .nav-links { gap: 14px; }
+      nav { padding: 0 20px; } .nav-links { gap: 14px; }
       .hero { grid-template-columns: 1fr; padding: 40px 24px; gap: 24px; }
       .hero-photo { width: 120px; height: 120px; }
       .content { padding: 0 24px 60px; }
@@ -129,7 +95,7 @@
       <li><a href="#courses">Courses</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="CV.pdf" target="_blank">CV</a></li>
-      <li><a <a href="#" onclick="window.location='mai'+'lto:pdahal@vt.edu'" class="btn btn-ghost">Email Me</a>>Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -138,21 +104,21 @@
       <img src="Profile_pic.jpg" alt="Pragati Dahal" class="hero-photo" />
       <div class="hero-right">
         <h1>Pragati <em>Dahal</em></h1>
-        <div class="hero-role">PhD Student · Agricultural & Applied Economics · Virginia Tech</div>
+        <div class="hero-role">PhD Student &middot; Agricultural &amp; Applied Economics &middot; Virginia Tech</div>
         <p class="hero-bio">
-          I am a first-year PhD student at <a href="https://www.aaec.vt.edu/" target="_blank">Virginia Tech</a>, 
-          advised by <a href="https://www.lewangecon.com/" target="_blank">Dr. Le Wang</a>. 
+          I am a first-year PhD student at <a href="https://www.aaec.vt.edu/" target="_blank">Virginia Tech</a>,
+          advised by <a href="https://www.lewangecon.com/" target="_blank">Dr. Le Wang</a>.
           My research interests are in applied econometrics, health economics, and causal inference.
-          My dissertation examines the causal effect of broadband expansion on county-level mental health outcomes 
-          using staggered difference-in-differences and causal machine learning methods. I also contribute to the 
+          My dissertation examines the causal effect of broadband expansion on county-level mental health outcomes
+          using staggered difference-in-differences and causal machine learning methods. I also contribute to the
           <a href="https://aaec.vt.edu/academics/undergraduate/dspg.html" target="_blank">Data Science for the Public Good</a> program at Virginia Tech.
         </p>
         <div class="hero-links">
           <a href="CV.pdf" target="_blank" class="btn">Download CV</a>
-          <a <a href="#" onclick="window.location='mai'+'lto:pdahal@vt.edu'" class="btn btn-ghost">Email Me</a> class="btn btn-ghost">Email Me</a>
+          <a href="#" id="email-btn" class="btn btn-ghost">Email Me</a>
         </div>
         <div class="social-icons">
-          <a href="/cdn-cgi/l/email-protection#4e3e2a2f262f220e383a602b2a3b">Email</a>
+          <a href="#" id="email-link">Email</a>
           <a href="https://linkedin.com/in/pragatidahal9843" target="_blank">LinkedIn</a>
           <a href="https://github.com/pdahal23" target="_blank">GitHub</a>
         </div>
@@ -165,13 +131,12 @@
     <div class="section" id="posts">
       <div class="section-header"><h2>Posts</h2></div>
       <div class="posts-grid">
-
         <a href="#" class="post-card">
           <div class="post-card-img">Coming Soon</div>
           <div class="post-card-body">
             <div class="post-card-date">Coming 2025</div>
             <div class="post-card-title">Causal Inference for Undergrads: What the Data Is Actually Telling You</div>
-            <div class="post-card-desc">An accessible introduction to causal inference — the difference between correlation and causation, and why it matters for policy.</div>
+            <div class="post-card-desc">An accessible introduction to causal inference &mdash; the difference between correlation and causation, and why it matters for policy.</div>
           </div>
         </a>
         <a href="#" class="post-card">
@@ -182,46 +147,35 @@
             <div class="post-card-desc">Lecture notes and code from the DSPG Summer 2026 workshop on exploratory data analysis and visualization.</div>
           </div>
         </a>
-
       </div>
     </div>
 
     <div class="section" id="research">
       <div class="section-header"><h2>Research</h2></div>
-
       <div class="research-item">
         <div>
           <div class="research-title">Broadband Expansion and Mental Health Outcomes: Causal Evidence from U.S. Counties</div>
-          <div class="research-status">Dissertation Chapter · Work in Progress</div>
+          <div class="research-status">Dissertation Chapter &middot; Work in Progress</div>
           <p class="research-desc">Examines the causal effect of broadband infrastructure rollout on county-level mental health using staggered difference-in-differences and FCC Form 477 deployment data. Applies causal forest methods to identify heterogeneous treatment effects and characterize which county subpopulations benefit most from broadband access.</p>
-          <div class="research-links">
-            <a href="#">Draft (coming soon)</a>
-            <a href="#">Slides</a>
-          </div>
+          <div class="research-links"><a href="#">Draft (coming soon)</a><a href="#">Slides</a></div>
         </div>
         <div class="research-img-placeholder"><span>Broadband &amp; Mental Health</span></div>
       </div>
-
       <div class="research-item">
         <div>
           <div class="research-title">The Impact of Campaign Funds for Childcare Policies on Female Representation</div>
-          <div class="research-status">Submitted · Gender and Politics</div>
-          <p class="research-desc">Uses two-way fixed effects and staggered difference-in-differences (Callaway–Sant'Anna) to estimate the causal effect of Campaign Funds for Childcare (CFCC) policies on women's candidacy across federal, state, and local elections. Finds heterogeneous effects with local elections showing meaningful increases in female participation.</p>
-          <div class="research-links">
-            <a href="#">Draft (coming soon)</a>
-          </div>
+          <div class="research-status">Submitted &middot; Gender and Politics</div>
+          <p class="research-desc">Uses two-way fixed effects and staggered difference-in-differences (Callaway&ndash;Sant&rsquo;Anna) to estimate the causal effect of Campaign Funds for Childcare (CFCC) policies on women&rsquo;s candidacy across federal, state, and local elections. Finds heterogeneous effects with local elections showing meaningful increases in female participation.</p>
+          <div class="research-links"><a href="#">Draft (coming soon)</a></div>
         </div>
         <div class="research-img-placeholder"><span>Gender &amp; Politics</span></div>
       </div>
-
       <div class="research-item">
         <div>
-          <div class="research-title">Economic Efficiency of Mineral Oil–Insecticide Combinations in PVY Management</div>
-          <div class="research-status">Manuscript · Work in Progress</div>
+          <div class="research-title">Economic Efficiency of Mineral Oil&ndash;Insecticide Combinations in PVY Management</div>
+          <div class="research-status">Manuscript &middot; Work in Progress</div>
           <p class="research-desc">Evaluates six mineral oil and insecticide spray programs using multi-year field trial data from Idaho and a partial budgeting framework. Finds the at-plant insecticide plus weekly oil treatment generates the highest net revenue across potato size classes.</p>
-          <div class="research-links">
-            <a href="#">Draft (coming soon)</a>
-          </div>
+          <div class="research-links"><a href="#">Draft (coming soon)</a></div>
         </div>
         <div class="research-img-placeholder"><span>Agricultural Economics</span></div>
       </div>
@@ -234,34 +188,30 @@
 
     <div class="section" id="experience">
       <div class="section-header"><h2>Experience</h2></div>
-
       <div class="research-item">
         <div>
           <div class="research-title">Graduate Research Assistant</div>
-          <div class="research-status">2025–Present · Virginia Tech</div>
+          <div class="research-status">2025&ndash;Present &middot; Virginia Tech</div>
           <p class="research-desc">Department of Agricultural and Applied Economics. Conducting research on the causal effect of broadband infrastructure expansion on county-level mental health outcomes in the U.S., using FCC Form 477, CDC PLACES, County Health Rankings, and American Community Survey panel data. Building and estimating staggered difference-in-differences and event study models in Stata.</p>
         </div>
         <div class="research-img-placeholder"><span>Virginia Tech</span></div>
       </div>
-
       <div class="research-item">
         <div>
           <div class="research-title">Graduate Lead</div>
-          <div class="research-status">Summer 2026 · <a href="https://aaec.vt.edu/centers/index.html" target="_blank" style="color:var(--gold);text-decoration:none;">Kohl Center</a> · Virginia Tech</div>
+          <div class="research-status">Summer 2026 &middot; <a href="https://aaec.vt.edu/centers/index.html" target="_blank" style="color:var(--gold);text-decoration:none;">Kohl Center</a> &middot; Virginia Tech</div>
           <p class="research-desc">Data Science for the Public Good (<a href="https://aaec.vt.edu/academics/undergraduate/dspg.html" target="_blank" style="color:var(--maroon);text-decoration:none;">DSPG</a>) program. Leading undergraduate students in applied data science projects for public good research, including instruction on causal inference and data visualization methods.</p>
         </div>
-        <div class="research-img-placeholder"><span>DSPG · Kohl Center</span></div>
+        <div class="research-img-placeholder"><span>DSPG &middot; Kohl Center</span></div>
       </div>
-
       <div class="research-item">
         <div>
           <div class="research-title">Graduate Research Assistant</div>
-          <div class="research-status">2023–2025 · University of Idaho</div>
+          <div class="research-status">2023&ndash;2025 &middot; University of Idaho</div>
           <p class="research-desc">Department of Agricultural Economics and Rural Sociology. Applied two-way fixed effects and staggered difference-in-differences estimators to estimate the causal effect of childcare campaign finance policies on female candidacy. Evaluated PVY management treatments using multi-year field trial data and a partial budgeting framework in R. Designed and administered a discrete choice experiment survey to commercial potato growers.</p>
         </div>
         <div class="research-img-placeholder"><span>University of Idaho</span></div>
       </div>
-
     </div>
 
     <div class="section" id="contact">
@@ -274,12 +224,11 @@
         <div>
           <div class="contact-label">Email</div>
           <div class="contact-value" id="email-display"></div>
-<script>document.getElementById('email-display').innerHTML = ['pdahal','vt.edu'].join('@');</script>
         </div>
         <div>
           <div class="contact-label">Affiliation</div>
           <div class="contact-value">
-            <a href="https://www.aaec.vt.edu/" target="_blank">Dept. of Agricultural & Applied Economics</a><br>Virginia Tech
+            <a href="https://www.aaec.vt.edu/" target="_blank">Dept. of Agricultural &amp; Applied Economics</a><br>Virginia Tech
           </div>
         </div>
         <div>
@@ -292,10 +241,23 @@
   </div>
 
   <footer>
-    <p>© 2026 Pragati Dahal · Virginia Tech</p>
+    <p>&copy; 2026 Pragati Dahal &middot; Virginia Tech</p>
     <p>Built with HTML &amp; <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>
   </footer>
 
   <script>
-    const sections = document.querySelectorAll('[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
+    var u='pdahal',d='vt.edu',e=u+'@'+d;
+    document.getElementById('email-display').textContent=e;
+    document.getElementById('email-btn').href='mailto:'+e;
+    document.getElementById('email-link').href='mailto:'+e;
+    const sections=document.querySelectorAll('[id]');
+    const navLinks=document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll',function(){
+      var current='';
+      sections.forEach(function(s){if(window.scrollY>=s.offsetTop-80)current=s.id;});
+      navLinks.forEach(function(a){a.style.color=a.getAttribute('href')==='#'+current?'#fff':'';});
+    });
+  </script>
+
+</body>
+</html>

@@ -31,7 +31,7 @@
       --transition: 0.22s ease;
     }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; font-size: 15px; }
+    html { scroll-behavior: smooth; font-size: 17px; }
     body { background: var(--cream); color: var(--ink); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; letter-spacing: -0.01em; }
 
     /* ── SCROLLBAR ── */
@@ -61,10 +61,13 @@
       padding: 80px 56px 72px;
       position: relative; overflow: hidden;
     }
-    .hero-section::before {
-      content: ''; position: absolute; inset: 0;
-      background: none;
+    .hero-mountains {
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 60%;
+      height: 100%;
       pointer-events: none;
+      opacity: 0.07;
     }
     .hero-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 210px 1fr; gap: 56px; align-items: start; position: relative; }
     .hero-photo-wrap { position: relative; }
@@ -224,6 +227,19 @@
   <!-- HERO -->
   <section id="about">
     <div class="hero-section">
+      <!-- Himalayan mountain silhouette -->
+      <svg class="hero-mountains" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMax meet">
+        <!-- Far background range -->
+        <polygon points="0,400 0,280 60,240 120,260 180,200 240,220 300,170 360,190 420,150 480,175 540,140 600,160 660,120 720,145 780,110 800,130 800,400" fill="#5a4a3a" opacity="0.4"/>
+        <!-- Mid range -->
+        <polygon points="0,400 0,320 80,290 160,310 240,260 320,280 400,220 460,245 520,200 580,230 640,185 700,210 760,170 800,195 800,400" fill="#4a3a2a" opacity="0.5"/>
+        <!-- Main peaks - Everest-like silhouette -->
+        <polygon points="0,400 0,350 100,330 200,340 280,300 340,310 390,240 420,180 450,240 490,220 530,260 590,240 650,280 720,260 800,280 800,400" fill="#3a2a1a" opacity="0.6"/>
+        <!-- Snow caps -->
+        <polygon points="390,240 420,180 450,240 435,225 420,195 405,225" fill="#fff" opacity="0.5"/>
+        <polygon points="490,220 520,165 550,220 535,208 520,178 505,208" fill="#fff" opacity="0.4"/>
+        <polygon points="640,185 665,140 690,185 675,172 665,150 655,172" fill="#fff" opacity="0.35"/>
+      </svg>
       <div class="hero-inner">
         <div class="hero-photo-wrap">
           <img src="Profile_pic.jpg" alt="Pragati Dahal" class="hero-photo" />

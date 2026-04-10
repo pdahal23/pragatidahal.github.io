@@ -57,38 +57,27 @@
     .nav-links a:hover, .nav-links a.active { color: var(--maroon); border-bottom-color: var(--maroon); }
 
     /* ── HERO ── */
-    .hero-section {
-      background: var(--cream);
-      padding: 80px 0 72px;
-      position: relative; overflow: hidden;
-    }
-    .hero-inner { max-width: 960px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: 200px 1fr; gap: 56px; align-items: start; position: relative; }
-    .hero-photo-wrap { position: relative; }
-    .hero-photo { width: 210px; height: 210px; border-radius: 50%; object-fit: cover; object-position: center top; border: 3px solid var(--rule); box-shadow: var(--shadow-lg); transition: transform 0.4s ease; }
+    .hero-section { background: var(--cream); padding: 60px 0 72px; }
+    .hero-inner { max-width: 960px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: 240px 1fr; gap: 56px; align-items: start; }
+
+    /* Left column */
+    .hero-left { display: flex; flex-direction: column; align-items: center; }
+    .hero-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; border: 3px solid var(--rule); box-shadow: var(--shadow-lg); margin-bottom: 20px; transition: transform 0.4s ease; }
     .hero-photo:hover { transform: scale(1.02); }
-    .hero-badge { position: absolute; bottom: 8px; right: 8px; background: var(--maroon); color: #fff; font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 20px; }
-    .hero-right { padding-top: 8px; }
-    .hero-right h1 { font-family: var(--serif); font-size: 2.8rem; font-weight: 500; line-height: 1.1; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.02em; }
-    .hero-right h1 em { font-style: italic; color: var(--maroon); }
-    .hero-role { font-family: var(--mono); font-size: 0.67rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 24px; }
-    .hero-bio { font-size: 1rem; color: var(--ink-soft); line-height: 1.85; margin-bottom: 28px; max-width: 520px; font-family: var(--sans); }
-    .hero-bio a { color: var(--maroon); text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color var(--transition); }
-    .hero-bio a:hover { border-bottom-color: var(--maroon); }
-    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
-    .btn { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 20px; text-decoration: none; border-radius: var(--radius); transition: all var(--transition); cursor: pointer; border: none; }
-    .btn-primary { color: #fff; background: var(--maroon); }
-    .btn-primary:hover { background: var(--maroon-light); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(122,25,51,0.4); }
-    .btn-outline { color: var(--maroon); border: 1px solid var(--maroon); background: transparent; }
-    .btn-outline:hover { border-color: var(--maroon); color: #fff; background: var(--maroon); transform: translateY(-1px); }
-    .hero-meta { margin-bottom: 20px; display: flex; flex-direction: column; gap: 6px; }
-    .hero-meta-row { display: flex; gap: 16px; align-items: baseline; }
-    .hero-meta-label { font-family: var(--sans); font-size: 0.72rem; color: var(--ink-muted); min-width: 80px; font-weight: 400; }
-    .hero-meta-value { font-size: 0.9rem; color: var(--ink); }
-    .hero-meta-value a { color: var(--maroon); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color var(--transition); }
-    .hero-meta-value a:hover { border-bottom-color: var(--maroon); }
-    .hero-socials { display: flex; gap: 10px; margin-top: 4px; }
+    .hero-socials { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
     .social-icon { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 6px; background: var(--maroon); color: #fff; text-decoration: none; transition: background var(--transition), transform var(--transition); }
     .social-icon:hover { background: var(--maroon-light); transform: translateY(-2px); }
+
+    /* Right column */
+    .hero-right { padding-top: 8px; }
+    .hero-right h1 { font-family: var(--serif); font-size: 2.6rem; font-weight: 500; line-height: 1.1; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.02em; }
+    .hero-right h1 em { font-style: italic; color: var(--maroon); }
+    .hero-role { font-size: 0.82rem; color: var(--ink-muted); margin-bottom: 24px; }
+    .hero-bio { font-size: 1rem; color: var(--ink-soft); line-height: 1.85; margin-bottom: 20px; font-family: var(--sans); }
+    .hero-bio a { color: var(--maroon); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color var(--transition); }
+    .hero-bio a:hover { border-bottom-color: var(--maroon); }
+    .hero-cv { display: inline-block; font-family: var(--sans); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: #fff; background: var(--maroon); padding: 10px 24px; border-radius: var(--radius); text-decoration: none; transition: background var(--transition), transform var(--transition); }
+    .hero-cv:hover { background: var(--maroon-light); transform: translateY(-1px); }
 
     /* ── STATS BAR ── */
     .stats-bar { background: var(--dark-2); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid var(--rule); }

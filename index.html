@@ -46,7 +46,7 @@
       background: rgba(250,248,244,0.97);
       backdrop-filter: blur(12px);
       display: flex; align-items: center; justify-content: space-between;
-      padding: 0 56px; height: 58px;
+      padding: 0 80px; height: 58px;
       border-bottom: 1px solid var(--rule);
     }
     .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; transition: opacity var(--transition); }
@@ -58,18 +58,10 @@
     /* ── HERO ── */
     .hero-section {
       background: var(--cream);
-      padding: 80px 56px 72px;
+      padding: 80px 80px 72px;
       position: relative; overflow: hidden;
     }
-    .hero-mountains {
-      position: absolute;
-      bottom: 0; right: 0;
-      width: 60%;
-      height: 100%;
-      pointer-events: none;
-      opacity: 0.07;
-    }
-    .hero-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 210px 1fr; gap: 56px; align-items: start; position: relative; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 220px 1fr; gap: 64px; align-items: start; position: relative; }
     .hero-photo-wrap { position: relative; }
     .hero-photo { width: 210px; height: 210px; border-radius: 50%; object-fit: cover; object-position: center top; border: 3px solid var(--rule); box-shadow: var(--shadow-lg); transition: transform 0.4s ease; }
     .hero-photo:hover { transform: scale(1.02); }
@@ -99,14 +91,14 @@
 
     /* ── STATS BAR ── */
     .stats-bar { background: var(--dark-2); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid var(--rule); }
-    .stats-inner { max-width: 900px; margin: 0 auto; padding: 0 56px; display: flex; gap: 0; }
+    .stats-inner { max-width: 1200px; margin: 0 auto; padding: 0 80px; display: flex; gap: 0; }
     .stat-item { flex: 1; padding: 20px 0; text-align: center; border-right: 1px solid var(--rule); }
     .stat-item:last-child { border-right: none; } 
     .stat-num { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; color: var(--maroon); line-height: 1; margin-bottom: 4px; }
     .stat-label { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); }
 
     /* ── MAIN CONTENT ── */
-    .main { max-width: 900px; margin: 0 auto; padding: 0 56px 80px; }
+    .main { max-width: 1200px; margin: 0 auto; padding: 0 80px 80px; }
 
     /* ── SECTION ── */
     .section { margin-top: 72px; }
@@ -191,7 +183,7 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 760px) {
-      nav { padding: 0 20px; }
+      nav { padding: 0 24px; }
       .nav-links { gap: 14px; display: none; }
       .hero-section { padding: 48px 24px; }
       .hero-inner { grid-template-columns: 1fr; gap: 28px; }
@@ -227,19 +219,6 @@
   <!-- HERO -->
   <section id="about">
     <div class="hero-section">
-      <!-- Himalayan mountain silhouette -->
-      <svg class="hero-mountains" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMax meet">
-        <!-- Far background range -->
-        <polygon points="0,400 0,280 60,240 120,260 180,200 240,220 300,170 360,190 420,150 480,175 540,140 600,160 660,120 720,145 780,110 800,130 800,400" fill="#5a4a3a" opacity="0.4"/>
-        <!-- Mid range -->
-        <polygon points="0,400 0,320 80,290 160,310 240,260 320,280 400,220 460,245 520,200 580,230 640,185 700,210 760,170 800,195 800,400" fill="#4a3a2a" opacity="0.5"/>
-        <!-- Main peaks - Everest-like silhouette -->
-        <polygon points="0,400 0,350 100,330 200,340 280,300 340,310 390,240 420,180 450,240 490,220 530,260 590,240 650,280 720,260 800,280 800,400" fill="#3a2a1a" opacity="0.6"/>
-        <!-- Snow caps -->
-        <polygon points="390,240 420,180 450,240 435,225 420,195 405,225" fill="#fff" opacity="0.5"/>
-        <polygon points="490,220 520,165 550,220 535,208 520,178 505,208" fill="#fff" opacity="0.4"/>
-        <polygon points="640,185 665,140 690,185 675,172 665,150 655,172" fill="#fff" opacity="0.35"/>
-      </svg>
       <div class="hero-inner">
         <div class="hero-photo-wrap">
           <img src="Profile_pic.jpg" alt="Pragati Dahal" class="hero-photo" />
